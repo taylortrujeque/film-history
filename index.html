@@ -482,6 +482,63 @@
     .g-purple  { background: linear-gradient(135deg, var(--purple), var(--blue)); }
     .g-cyan    { background: linear-gradient(135deg, var(--cyan), var(--green)); }
     .g-yellow  { background: linear-gradient(135deg, var(--yellow), var(--orange)); }
+
+    /* ── VIDEO EMBEDS ── */
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #000;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 8px;
+    }
+    .video-title {
+      font-size: .95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    .video-block {
+      margin-top: 28px;
+    }
+    .video-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .video-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 24px;
+    }
+    @media (max-width: 640px) {
+      .video-grid-2, .video-grid-4 { grid-template-columns: 1fr; }
+    }
+    .opp-clip-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 6px;
+    }
   </style>
 </head>
 <body>
@@ -494,6 +551,7 @@
   <a href="#timeline">Timeline</a>
   <a href="#international">International</a>
   <a href="#studios">Studios</a>
+  <a href="#watch">Watch</a>
   <a href="#sound-design">Sound Design</a>
   <a href="#quiz-section">Quiz</a>
 </nav>
@@ -587,6 +645,40 @@
       <div class="tl-year">1931</div>
       <div class="tl-title">Dubbing & Subtitles Perfected</div>
       <div class="tl-desc">Mixed soundtracks improve dramatically — original music and effects could be kept while swapping dialogue tracks. Subtitles gain wider acceptance.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WATCH FILMS ── -->
+<section id="watch">
+  <div class="reveal">
+    <span class="section-tag g-cyan" style="color:#fff;">Watch</span>
+    <h2>See It for Yourself</h2>
+    <p class="lead">The films that changed cinema history — watch them here.</p>
+  </div>
+
+  <div class="video-grid-2 reveal">
+    <div>
+      <div class="video-label">Warner Bros. · 1927</div>
+      <div class="video-title">🎷 The Jazz Singer — Dir. Alan Crosland</div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/HkHWSvZUPy8" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div>
+      <div class="video-label">Warner Bros. · 1927</div>
+      <div class="video-title">🎷 The Jazz Singer — Clip</div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/FWgOPGK589Q" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-block reveal" style="margin-top:36px;">
+    <div class="video-label">Fox Film · 1927</div>
+    <div class="video-title">✈️ Fox Movietone Newsreel — Charles Lindbergh's Takeoff &amp; Return</div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/fWvX4M1dXss?start=1" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -696,16 +788,36 @@
     </div>
   </div>
 
-  <!-- Oppenheimer callout -->
-  <div class="callout reveal">
+  <!-- Oppenheimer case study -->
+  <div class="callout reveal" style="margin-top:36px;">
     <div class="callout-icon">💣</div>
     <h3>Case Study: <em>Oppenheimer</em> (2023) — Dir. Christopher Nolan</h3>
-    <p>Nolan masterfully uses both diegetic and non-diegetic sound to build tension and awe. Watch these key moments and identify what type of sound is used — and why Nolan made that choice.</p>
-    <div class="timestamps">
-      <span class="ts">7:07 – 9:00</span>
-      <span class="ts">1:54 – 1:59</span>
-      <span class="ts">2:04 – 2:08</span>
-      <span class="ts">2:42 – 2:47</span>
+    <p>Watch these clips and identify whether the sound is diegetic or non-diegetic — and think about <em>why</em> Nolan made that choice.</p>
+  </div>
+  <div class="video-grid-4 reveal">
+    <div>
+      <div class="opp-clip-label">Clip 1 · 7:07 – 9:00</div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/2vlwm4VyyTc" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div>
+      <div class="opp-clip-label">Clip 2 · 1:54 – 1:59</div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/b3X4-MjrOfA?start=1" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div>
+      <div class="opp-clip-label">Clip 3 · 2:04 – 2:08</div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/M0iSCfmIdqg?start=2" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div>
+      <div class="opp-clip-label">Clip 4 · 2:42 – 2:47</div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/fWvX4M1dXss?start=1" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </section>
